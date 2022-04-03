@@ -3,7 +3,9 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
-  - init: cargo build && make
+  - init: |
+      sudo apt-get install -y libudev-dev
+      cargo build && make
     command: cargo watch -x run
 
 
