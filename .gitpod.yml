@@ -8,6 +8,6 @@ tasks:
       sh -c "$(curl -sSfL https://release.solana.com/v1.10.5/install)"
       cargo build && make
     command:
-      export PATH=/home/gitpod/.local/share/solana/install/active_release/bin:/workspace/anchor/target/release:$PATH
+      eval $(gp env -e PATH=/home/gitpod/.local/share/solana/install/active_release/bin:/workspace/anchor/target/release:$PATH)
 
 
