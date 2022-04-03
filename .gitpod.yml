@@ -6,9 +6,7 @@ tasks:
   - init: |
       sudo apt-get install -y libudev-dev
       sh -c "$(curl -sSfL https://release.solana.com/v1.10.5/install)"
-      cargo install --git https://github.com/project-serum/anchor avm --locked --force
-      avm install latest
-      avm use latest
+      cargo build && make
     command:
       eval $(gp env -e PATH=/home/gitpod/.local/share/solana/install/active_release/bin:/workspace/anchor/target/release:$PATH)
 
